@@ -27,13 +27,13 @@ body {
 
 h1 {
     font-size: 26px;
-    color: #222;
+    color: #690000;
     margin-bottom: 5px;
 }
 
 .subtitle {
     font-size: 14px;
-    color: #555;
+    color: #ffffff;
     margin-top: 0;
 }
 
@@ -65,20 +65,7 @@ h1 {
 }
 
 
-.profile-icon {
-    width: 100px;
-    height: 100px;
-    background-color: #ccc;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
-    color: #555;
-    font-size: 11px;
-    text-align: center;
-    padding: 5px;
-}
+
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
