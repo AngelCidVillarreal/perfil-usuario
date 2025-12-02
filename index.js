@@ -1,50 +1,65 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const activarFuncionesBtn = document.getElementById('activarFuncionesBtn');
+    
     const motivationsList = document.getElementById('motivations-list');
     const frustrationsList = document.getElementById('frustrations-list');
-
-    const motivationsTitle = motivationsList.previousElementSibling;
-    const frustrationsTitle = frustrationsList.previousElementSibling;
-
-    function toggleVisibility(element) {
-        if (element.classList.contains('hidden-content')) {
-            element.classList.remove('hidden-content');
-        } else {
-            element.classList.add('hidden-content');
-        }
-    }
-
-    motivationsTitle.addEventListener('click', () => {
-        toggleVisibility(motivationsList);
-    });
-
-    frustrationsTitle.addEventListener('click', () => {
-        toggleVisibility(frustrationsList);
-    });
+    const motivationsBox = document.querySelector('.motivations h3');
+    const frustrationsBox = document.querySelector('.frustrations h3');
 
     const gorillazTitle = document.getElementById('gorillaz-title');
-    let colorIndex = 0;
-    const colors = ['#007bff', '#28a745', '#ffc107', '#dc3545']; // Array de colores
-
-    gorillazTitle.addEventListener('click', () => {
-        gorillazTitle.style.borderBottomColor = colors[colorIndex];
-        gorillazTitle.style.color = colors[colorIndex];
-        colorIndex = (colorIndex + 1) % colors.length;
-    });
-
+    
     const blurTitle = document.getElementById('blur-title');
     const blurText = document.getElementById('blur-text');
-    let isOriginalText = true;
+    const blurTextShort = 'Blur es una banda de rock británica formada en Londres en 1988... popularizaron el género del britpop.';
+    const blurTextLong = 'Blur es una banda de rock británica formada en Londres en 1988. Como una de las bandas más prominentes del movimiento Britpop, se hicieron conocidos por su experimentación con diversos géneros. Sus miembros son Damon Albarn, Graham Coxon, Alex James y Dave Rowntree. Popularizaron el género del britpop.';
+    
+    const cambiarGeneroBtn = document.getElementById('cambiarGeneroBtn');
+    const generoTexto = document.getElementById('genero-texto');
+    let esNino = true;
+    const toggleHiddenContent = (element) => {
+        element.classList.toggle('hidden-content');
+    };
+    motivationsBox.addEventListener('click', () => {
+        toggleHiddenContent(motivationsList);
+    });
 
-    blurTitle.addEventListener('click', () => {
-        if (isOriginalText) {
+    frustrationsBox.addEventListener('click', () => {
+        toggleHiddenContent(frustrationsList);
+    });
 
-            blurText.textContent = "Blur es considerada una de las bandas pilares del Britpop de los 90. Tras la 'Batalla del Britpop' contra Oasis, Albarn comenzó a experimentar con sonidos más alternativos y la música del mundo, lo que eventualmente lo llevó a Gorillaz.";
-            blurTitle.textContent = "Blur (Texto cambiado)";
+    activarFuncionesBtn.addEventListener('click', () => {
+        alert('Funcionalidades JS (Ocultar/Mostrar, Lógica Condicional, etc.) activadas o disponibles.');
+        console.log('Interacciones JS activadas.');
+    });
+    gorillazTitle.addEventListener('click', () => {
+        if (gorillazTitle.style.color === 'red') {
+            gorillazTitle.style.color = ''; 
         } else {
-            blurText.textContent = "Blur es una banda de rock británica formada en Londres en 1988. Está formada por el cantante Damon Albarn, el guitarrista Graham Coxon, el bajista Alex James y el baterista Dave Rowntree. Su álbum debut, Leisure (1991), incorporó los sonidos del madchester y el shoegazing. Luego popularizaron el britpop en una batalla mediática con Oasis.";
-            blurTitle.textContent = "Blur (Click para cambiar texto)";
+            gorillazTitle.style.color = 'red';
         }
-        
-        isOriginalText = !isOriginalText;
+    });
+    blurTitle.addEventListener('click', () => {
+        if (blurText.textContent === blurTextShort) {
+            blurText.textContent = blurTextLong;
+            blurTitle.textContent = 'Blur (Click para Texto Corto)';
+        } 
+      
+        else {
+            blurText.textContent = blurTextShort;
+            blurTitle.textContent = 'Blur (Click para Texto Largo/Corto)';
+        }
+    });
+
+    cambiarGeneroBtn.addEventListener('click', () => {
+        if (esNino) {
+            generoTexto.innerHTML = generoTexto.innerHTML.replace('niño', '**niña**');
+            esNino = false;
+            cambiarGeneroBtn.textContent = 'Alternar "Niña" a "Niño"';
+        } 
+        else {
+            generoTexto.innerHTML = generoTexto.innerHTML.replace('niña', '**niño**');
+            esNino = true;
+            cambiarGeneroBtn.textContent = 'Alternar "Niño" a "Niña"';
+        }
     });
 });
