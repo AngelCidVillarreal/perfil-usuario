@@ -52,12 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cambiarGeneroBtn.addEventListener('click', () => {
         if (esNino) {
-            generoTexto.innerHTML = generoTexto.innerHTML.replace('niño', '**niña**');
+            generoTexto.innerHTML = generoTexto.innerHTML.replace('niño', 'niña');
             esNino = false;
             cambiarGeneroBtn.textContent = 'Alternar "Niña" a "Niño"';
         } 
         else {
-            generoTexto.innerHTML = generoTexto.innerHTML.replace('niña', '**niño**');
+            generoTexto.innerHTML = generoTexto.innerHTML.replace('niña', 'niño');
             esNino = true;
             cambiarGeneroBtn.textContent = 'Alternar "Niño" a "Niña"';
         }
