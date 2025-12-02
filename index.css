@@ -1,10 +1,16 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #000000;
-    margin: 20px;
+    margin: 30px;
     padding: 0;
     color: #c04646;
+}
+body {
+    background-image: url(img/fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0 10px 50px 10px;
 }
 
 .container {
@@ -15,6 +21,7 @@ body {
     border: 1px solid #2b2b2b;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
 }
 
 
