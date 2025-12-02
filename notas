@@ -1,0 +1,27 @@
+Tiempo estimado: 40 minutos para el prático
+
+Objetivo: Crear una sencilla página web que muestre un perfil de usuario (de la persona a quien admiramos), permitiendo interactuar con algunos elementos mediante JavaScript y gestionar el proyecto con Git y GitHub.
+
+Criterios de Evaluación:
+HTML5: Estructura semántica, uso correcto de etiquetas y atributos. (15 Puntos)
+
+CSS3: Aplicación de estilos, uso de Flexbox/Grid para layout, uso de Media Queries para responsividad, selectores y propiedades. (15 puntos)
+
+JavaScript: Manipulación del DOM, manejo de eventos, lógica condicional, uso de variables. (15 puntos)
+
+Git y GitHub: Inicialización de repositorio, commits significativos, push al remoto, publicación con GitHub Pages.  (15 puntos)
+
+Instrucciones Generales:
+1. Crea una nueva carpeta en tu computadora para este proyecto y nómbrala perfil-usuario.
+
+2. Dentro de esta carpeta, inicializa un repositorio de Git.
+
+3. Crea tres archivos principales: index.html, style.css y script.js.
+
+4. Realiza commits de forma regular (cada 15 min) y significativa a lo largo del ejercicio.
+
+5. Una vez finalizado el ejercicio, sube tu repositorio a GitHub y publica la página usando GitHub Pages.  
+
+Detalle del Desarrollo
+
+Entregar el repositorio de GitHub en donde esta el código y el link de la página web.
